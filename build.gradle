@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.0'
+    ext.cubaVersion = '7.1.0'
     repositories {
         mavenLocal()
         maven {
@@ -40,10 +40,10 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.grapesjs:grapesjs-global:0.2-SNAPSHOT")
+    appComponent("com.haulmont.addon.grapesjs:grapesjs-global:0.3-SNAPSHOT")
 }
 
-def hsql = 'org.hsqldb:hsqldb:2.2.9'
+def hsql = 'org.hsqldb:hsqldb:2.4.1'
 
 configure([globalModule, coreModule, webModule]) {
     apply(plugin: 'java')
